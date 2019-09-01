@@ -15,6 +15,23 @@ function isLeapYear(year) {
     )
     )
 }
+function main(){
+    var anoDeEntrada = 2003;
+    if (isLeapYear(anoDeEntrada)){
+        return console.log('Es un buen ano de entrada');
+    }
+    console.log('Es un mal ano de entrada');
+    while(!isLeapYear(anoDeEntrada)){
+        anoDeEntrada--;
+    }
+    console.log('El anterior buen ano de entrada seria: ', anoDeEntrada);
+
+    do{
+        anoDeEntrada++;
+    }while(!isLeapYear(anoDeEntrada));
+    console.log('El siguiente buen ano de entrada seria: ', anoDeEntrada);
+
+}
 
 // for(var x = 2000; x<=3000; x++){
 //     console.log(x, isLeapYear(x));
@@ -41,3 +58,4 @@ function isLeapYear(year) {
 // }while(!isLeapYear(anno))
 // console.log(anno, 1);
 // console.log('Fin del do while')
+main();
